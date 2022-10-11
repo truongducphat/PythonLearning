@@ -1,0 +1,20 @@
+largest = None
+smallest = None
+while True:
+    num = input("Enter a number: ")
+    if num == 'done':
+        break
+#Invalid input (apart from number and done)
+    try:
+        fnum = int(num)
+    except:
+        print("Invalid input")
+        continue
+#Find the largest and the smallest
+    if largest is None or largest < fnum:
+        largest = fnum
+    if smallest is None or smallest > fnum:
+        smallest = fnum
+#Print the result   
+print("Maximum is", largest)
+print("Minumum is", smallest)
